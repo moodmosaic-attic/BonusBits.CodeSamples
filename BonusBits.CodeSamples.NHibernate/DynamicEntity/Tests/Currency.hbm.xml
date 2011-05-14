@@ -1,0 +1,42 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   default-access="property"
+                   auto-import="true"
+                   default-cascade="none"
+                   default-lazy="true">
+  <class xmlns="urn:nhibernate-mapping-2.2"
+         mutable="true"
+         entity-name="Currency">
+    <id name="ISOCode"
+        type="System.String, mscorlib, Version=4.0.0.0, 
+          Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ISOCode" />
+      <generator class="assigned" />
+    </id>
+    <property name="EnglishName"
+              type="System.String, mscorlib, Version=4.0.0.0, 
+                Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EnglishName" />
+    </property>
+    <property name="ExchangeRateEURtoCurrency"
+              type="System.Decimal, mscorlib, Version=4.0.0.0, 
+                Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ExchangeRateEURtoCurrency" />
+    </property>
+    <property name="ExchangeRateUpdatedOn"
+              type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0,
+                Culture=neutral, PublicKeyToken=b77a5c561934e089]], 
+                  mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ExchangeRateUpdatedOn" />
+    </property>
+    <property name="IsEnabled"
+              type="System.Boolean, mscorlib, Version=4.0.0.0, 
+                Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IsEnabled" />
+    </property>
+    <property name="Symbol"
+              type="System.String, mscorlib, Version=4.0.0.0, 
+                Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Symbol" />
+    </property>
+  </class>
+</hibernate-mapping>

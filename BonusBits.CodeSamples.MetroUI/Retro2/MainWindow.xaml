@@ -1,0 +1,169 @@
+﻿<Window
+    x:Class="BonusBits.CodeSamples.WPF.Retro2.MainWindow"
+    x:ClassModifier="internal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    PreviewMouseMove="HandlePreviewMouseMove">
+    <Grid>
+        <Grid
+            Background="Black">
+            <Rectangle
+                Height="28"
+                VerticalAlignment="Top"
+                Fill="Black"
+                PreviewMouseDown="HandleHeaderPreviewMouseDown" />
+            <Button
+                HorizontalAlignment="Right"
+                Margin="500,6,45,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource ChromeButtonStyle}"
+                Click="HandleMinimizeClick">
+                <TextBlock
+                    TextWrapping="Wrap"
+                    Text="0"
+                    FontFamily="Webdings"
+                    Foreground="#FF919191"
+                    FontSize="13.333" />
+            </Button>
+            <Button
+                HorizontalAlignment="Right"
+                Margin="500,6,26,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource ChromeButtonStyle}"
+                Click="HandleRestoreClick">
+                <TextBlock
+                    TextWrapping="Wrap"
+                    Text="1"
+                    FontFamily="Webdings"
+                    Foreground="#FF919191"
+                    FontSize="13.333" />
+            </Button>
+            <Button
+                HorizontalAlignment="Right"
+                Margin="500,6,8,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource ChromeButtonStyle}"
+                Click="HandleCloseClick">
+                <TextBlock
+                    TextWrapping="Wrap"
+                    Text="r"
+                    FontFamily="Webdings"
+                    Foreground="#FF919191"
+                    FontSize="13.333" />
+            </Button>
+        </Grid>
+        <Grid
+            x:Name="m_frameGrid"
+            x:FieldModifier="private">
+            <Border
+                x:Name="m_roundBorder"
+                x:FieldModifier="private"
+                BorderThickness="1"
+                BorderBrush="LightGray"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" />
+            <Rectangle
+                Stroke="{x:Null}"
+                VerticalAlignment="Top"
+                Height="7"
+                x:Name="top"
+                PreviewMouseDown="HandleRectanglePreviewMouseDown"
+                MouseMove="HandleRectangleMouseMove"
+                Margin="8,0,8,0"
+                Fill="#00000000" />
+            <Rectangle
+                Stroke="{x:Null}"
+                x:Name="bottom"
+                Height="7"
+                VerticalAlignment="Bottom"
+                PreviewMouseDown="HandleRectanglePreviewMouseDown"
+                MouseMove="HandleRectangleMouseMove"
+                Margin="8,0,8,0"
+                Fill="#00000000" />
+            <Rectangle
+                Stroke="{x:Null}"
+                HorizontalAlignment="Left"
+                Margin="0,7,0,7"
+                Width="8"
+                x:Name="left"
+                PreviewMouseDown="HandleRectanglePreviewMouseDown"
+                MouseMove="HandleRectangleMouseMove"
+                Fill="#00000000" />
+            <Rectangle
+                Stroke="{x:Null}"
+                Margin="0,7,0,7"
+                Width="8"
+                HorizontalAlignment="Right"
+                x:Name="right"
+                PreviewMouseDown="HandleRectanglePreviewMouseDown"
+                MouseMove="HandleRectangleMouseMove"
+                Fill="#00000000" />
+            <Rectangle
+                Stroke="{x:Null}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Width="8"
+                Height="7"
+                x:Name="bottomLeft"
+                PreviewMouseDown="HandleRectanglePreviewMouseDown"
+                MouseMove="HandleRectangleMouseMove"
+                Fill="#00000000" />
+            <Rectangle
+                Stroke="{x:Null}"
+                VerticalAlignment="Bottom"
+                Height="7"
+                Width="8"
+                HorizontalAlignment="Right"
+                x:Name="bottomRight"
+                PreviewMouseDown="HandleRectanglePreviewMouseDown"
+                MouseMove="HandleRectangleMouseMove"
+                Fill="#00000000" />
+            <Rectangle
+                Stroke="{x:Null}"
+                HorizontalAlignment="Right"
+                Width="8"
+                Height="7"
+                VerticalAlignment="Top"
+                x:Name="topRight"
+                PreviewMouseDown="HandleRectanglePreviewMouseDown"
+                MouseMove="HandleRectangleMouseMove"
+                Fill="#00000000" />
+            <Rectangle
+                Stroke="{x:Null}"
+                HorizontalAlignment="Left"
+                Width="8"
+                VerticalAlignment="Top"
+                Height="7"
+                x:Name="topLeft"
+                PreviewMouseLeftButtonDown="HandleRectanglePreviewMouseDown"
+                MouseMove="HandleRectangleMouseMove"
+                Fill="#00000000" />
+            <Path
+                x:Name="m_resize"
+                x:FieldModifier="private"
+                Data="M9.5390625,2.4619789 L9.5390625,11.133854 L0.8671875,11.133854 z"
+                HorizontalAlignment="Right"
+                Height="8.672"
+                Margin="0,0,1,1"
+                RenderTransformOrigin="0.5,0.5"
+                Stretch="Fill"
+                VerticalAlignment="Bottom"
+                Width="8.672"
+                StrokeDashArray="0.5 1"
+                StrokeDashOffset="2"
+                Fill="#FF119EDA"
+                IsHitTestVisible="False"
+                IsEnabled="False"
+                StrokeThickness="0">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+        </Grid>
+    </Grid>
+</Window>

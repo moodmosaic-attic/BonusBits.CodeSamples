@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C0F7956-72E7-4419-BD42-44A9B0E40E1E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BonusBits.CodeSamples.Agatha.Backend</RootNamespace>
+    <AssemblyName>BonusBits.CodeSamples.Agatha.Backend</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Agatha.Castle">
+      <HintPath>..\..\Lib\Agatha\Agatha.Castle\Agatha.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Agatha.Common">
+      <HintPath>..\..\Lib\Agatha\Agatha.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Agatha.ServiceLayer">
+      <HintPath>..\..\Lib\Agatha\Agatha.ServiceLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Agatha.StructureMap">
+      <HintPath>..\..\Lib\Agatha\Agatha.StructureMap\Agatha.StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\Lib\Agatha\Agatha.Castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\Lib\Agatha\Agatha.Castle\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\Lib\Common.Logging\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\..\Lib\Agatha\Agatha.StructureMap\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Composition\CastleRegistration.cs" />
+    <Compile Include="Composition\StructureMapRegistration.cs" />
+    <Compile Include="Domain\Authenticator.cs" />
+    <Compile Include="Domain\Database.cs" />
+    <Compile Include="Domain\ErrorHandler.cs" />
+    <Compile Include="Domain\IAuthenticator.cs" />
+    <Compile Include="Domain\IDatabase.cs" />
+    <Compile Include="Domain\IErrorHandler.cs" />
+    <Compile Include="Domain\ILogger.cs" />
+    <Compile Include="Domain\IStockQuote.cs" />
+    <Compile Include="Domain\IWebService.cs" />
+    <Compile Include="Domain\Logger.cs" />
+    <Compile Include="Domain\StockQuote.cs" />
+    <Compile Include="Domain\WebService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TestHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Messages\BonusBits.CodeSamples.Agatha.Messages.csproj">
+      <Project>{BD946FED-D10A-458A-8F0E-BF7AC8204C13}</Project>
+      <Name>BonusBits.CodeSamples.Agatha.Messages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
