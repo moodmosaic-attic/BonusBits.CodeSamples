@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensibleMvcApplication", "ExtensibleMvcApplication\ExtensibleMvcApplication.csproj", "{6B260409-0720-48EC-B8F4-8D7F7F60447D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{7556176B-413F-4C53-BAD8-F251E696838B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concepts", "Concepts\Concepts.csproj", "{A6D702D8-1681-4BDE-A851-6D1BBD003AFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B260409-0720-48EC-B8F4-8D7F7F60447D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B260409-0720-48EC-B8F4-8D7F7F60447D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B260409-0720-48EC-B8F4-8D7F7F60447D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B260409-0720-48EC-B8F4-8D7F7F60447D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D702D8-1681-4BDE-A851-6D1BBD003AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D702D8-1681-4BDE-A851-6D1BBD003AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D702D8-1681-4BDE-A851-6D1BBD003AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D702D8-1681-4BDE-A851-6D1BBD003AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6D702D8-1681-4BDE-A851-6D1BBD003AFC} = {7556176B-413F-4C53-BAD8-F251E696838B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal
