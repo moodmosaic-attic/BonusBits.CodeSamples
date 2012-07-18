@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntLibContrib.Windsor", "dotNet40\WindsorContainerConfigurator\EntLibContrib.Windsor.csproj", "{994D87AC-C440-4420-9B7D-9C6CBEF2FC34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntLibContrib.Windsor.Tests", "dotNet40\WindsorContainerConfigurator.Tests\EntLibContrib.Windsor.Tests.csproj", "{C38C5C80-42E2-4E9F-A5EF-02C20DB18786}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{994D87AC-C440-4420-9B7D-9C6CBEF2FC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{994D87AC-C440-4420-9B7D-9C6CBEF2FC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{994D87AC-C440-4420-9B7D-9C6CBEF2FC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{994D87AC-C440-4420-9B7D-9C6CBEF2FC34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C38C5C80-42E2-4E9F-A5EF-02C20DB18786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C38C5C80-42E2-4E9F-A5EF-02C20DB18786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C38C5C80-42E2-4E9F-A5EF-02C20DB18786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C38C5C80-42E2-4E9F-A5EF-02C20DB18786}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
